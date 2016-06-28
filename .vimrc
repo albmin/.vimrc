@@ -27,11 +27,11 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'plasticboy/vim-markdown'
 
 " Recommended Plugs
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'easymotion/vim-easymotion'
-
+Plug 'tpope/vim-vinegar'
 Plug 'majutsushi/tagbar'
 Plug 'fatih/vim-go'
 Plug 'shougo/neocomplete.vim'
@@ -55,16 +55,18 @@ syntax enable
 
 set background=dark
 
-let g:solarized_termcolors = 256
+set t_Co=256
+
+"let g:solarized_termcolors = 256
 set number
-colorscheme solarized
+"colorscheme solarized
 
 let g:go_fmt_command="goimports"
 
 let g:neocomplete#enable_at_startup = 1
 
 "molokai sucks for golang
-"colorscheme molokai
+colorscheme molokai
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 
@@ -96,6 +98,4 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
     \ }
-
-autocmd vimenter * NERDTree
 
